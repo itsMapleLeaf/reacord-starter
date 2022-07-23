@@ -40,12 +40,8 @@ const commands: Command[] = [
       },
     ],
     run: ({ interaction, reacord }) => {
-      reacord.reply(
-        interaction,
-        <Counter
-          initialCount={interaction.options.getInteger("initial-count", true)}
-        />,
-      )
+      const initialCount = interaction.options.getInteger("initial-count") ?? 0
+      reacord.reply(interaction, <Counter initialCount={initialCount} />)
     },
   },
 ]
