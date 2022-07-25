@@ -14,7 +14,7 @@ export function Counter({ initialCount }: { initialCount: number }) {
         label="-1"
         onClick={() => setCount((prevCount) => prevCount - 1)}
       />
-      <Button label="reset" onClick={() => setCount(0)} />
+      <Button label="reset" onClick={() => setCount(initialCount)} />
     </>
   )
 }
