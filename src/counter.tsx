@@ -6,8 +6,8 @@ export function Counter({ initialCount }: { initialCount: number }) {
   return (
     <>
       count: {count}
-      <Button label="+1" onClick={() => setCount(count + 1)} />
-      <Button label="-1" onClick={() => setCount(count - 1)} />
+      <Button label="+1" onClick={(prevCount) => setCount(prevCount + 1)} />
+      <Button label="-1" onClick={(prevCount) => setCount(prevCount - 1)} />
       <Button label="reset" onClick={() => setCount(0)} />
     </>
   )
