@@ -4,7 +4,7 @@ import { ReacordDiscordJs } from "reacord"
 import { setupCommands } from "./commands"
 
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds],
+	intents: [GatewayIntentBits.Guilds],
 })
 
 const reacord = new ReacordDiscordJs(client)
@@ -12,7 +12,7 @@ const reacord = new ReacordDiscordJs(client)
 setupCommands(client, reacord)
 
 client.once("ready", () => {
-  console.info("Ready!")
+	console.info("Ready!")
 })
 
 client.login(process.env.BOT_TOKEN).catch(console.error)

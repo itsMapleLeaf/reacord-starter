@@ -1,34 +1,34 @@
 {
-  "name": "reacord-starter",
-  "version": "0.0.0",
-  "description": "My awesome Discord bot made with Reacord ✨",
-  "license": "MIT",
-  "main": "dist/main.js",
-  "scripts": {
-    "prepare": "npm run build",
-    "dev": "run-p --print-label --race dev:*",
-    "dev:nodemon": "nodemon dist/main.js",
-    "dev:build": "npm run build -- --watch",
-    "build": "tsup src/main.tsx --target node16",
-    "start": "cross-env NODE_ENV=production node dist/main.js"
-  },
-  "dependencies": {
-    "cross-env": "^7.0.3",
-    "discord.js": "^14.1.2",
-    "dotenv": "^16.0.1",
-    "reacord": "^0.5.1",
-    "react": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.15",
-    "eslint": "^8.21.0",
-    "eslint-config-react-app": "^7.0.1",
-    "nodemon": "^2.0.19",
-    "npm-run-all": "^4.1.5",
-    "tsup": "^6.2.1",
-    "typescript": "^4.7.4"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  }
+	"name": "reacord-starter",
+	"version": "0.0.0",
+	"description": "My awesome Discord bot made with Reacord ✨",
+	"license": "MIT",
+	"main": "dist/main.js",
+	"scripts": {
+		"prepare": "npm run build",
+		"dev": "run-p --print-label --race dev:*",
+		"dev:build": "npm run build -- --watch",
+		"dev:nodemon": "nodemon .",
+		"build": "tsup src/main.tsx --target node16",
+		"start": "cross-env NODE_ENV=production node .",
+		"lint": "eslint . --cache --report-unused-disable-directives",
+		"format": "prettier . --write --cache"
+	},
+	"dependencies": {
+		"cross-env": "^7.0.3",
+		"discord.js": "^14.13.0",
+		"dotenv": "^16.3.1",
+		"reacord": "^0.6.0",
+		"react": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.2.33",
+		"eslint": "^8.52.0",
+		"eslint-config-react-app": "^7.0.1",
+		"nodemon": "^3.0.1",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^3.0.3",
+		"tsup": "^7.2.0",
+		"typescript": "^5.2.2"
+	}
 }
